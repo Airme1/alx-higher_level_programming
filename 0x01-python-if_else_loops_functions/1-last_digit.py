@@ -4,6 +4,7 @@ number = random.randint(-10000, 10000)
 if number < 0:
     number *= -1
     last_number = number % 10
+    last_number *= -1
     number *= -1
 if number >= 0:
     last_number = number % 10
