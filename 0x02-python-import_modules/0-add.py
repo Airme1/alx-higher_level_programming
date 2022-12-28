@@ -5,4 +5,6 @@ import add_0
 a = 1
 b = 2
 
-print(str(a), "+", str(b), "=", add_0.add(a,b))
+result = add(a,b)
+
+print("{:d} + {:d}".format(a, b, result))
