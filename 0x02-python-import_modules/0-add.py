@@ -7,4 +7,5 @@ b = 2
 
 result = add(a,b)
 
-print("{:d} + {:d}".format(a, b, result))
+if __name__ == "__main__":
+    print("{:d} + {:d}".format(a, b, result))
