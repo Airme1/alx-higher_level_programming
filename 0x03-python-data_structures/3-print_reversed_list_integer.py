@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
-    length = len(my_list)
-    last_index = length-1
-    for num in range(last_index, -1, -1):
-        print("{}".format(my_list[num], end="\n"))
+    """
+    print list in reverse order
+    my_list holds list values
+    """
+    if len(my_list):
+        length = (len(my_list) * -1) - 1
+
+        for i in range(-1, length, -1):
+            print("{:d}".format(my_list[i]), end="\n")
