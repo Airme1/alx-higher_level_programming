@@ -48,6 +48,21 @@ class Rectangle:
         """print rectangle with #"""
         if self.width == 0 or self.__height == 0:
             return ""
+        else:
+             for n in range(self.__height):
+                for m in range(self.__width):
+                    print("#", end="")
+                if n == self.__height -1:
+                    pass
+                else:
+                    print()
+    
+    def __str__(self):
+        self.print_rec()
+        return ""
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """delete instance of rectangle"""
