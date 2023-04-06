@@ -46,7 +46,8 @@ class Rectangle:
         """get perimeter of rectangle"""
         if (self.__width == 0 or self.__height == 0):
             return 0
-        return (self.__height * 2) + (self.__width * 2)
+        else:
+            return (self.__height * 2) + (self.__width * 2)
 
     def print_rec(self):
         """print rectangle with #"""
@@ -56,7 +57,10 @@ class Rectangle:
             for num1 in range(self.__height):
                 for num2 in range(self.__width):
                     print("#", end='')
-                print()
+                    if num1 == self.__height - 1:
+                        pass
+                    else:
+                        print()
     
     def __str__(self):
         self.print_rec()
