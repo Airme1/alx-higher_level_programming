@@ -52,11 +52,16 @@ class Rectangle:
             for n in range(self.__height):
                 for m in range(self.__width):
                     print("#", end="")
-                print()
+                if n == self.__height - 1:
+                    pass
+                else:
+                    print()
 
     def __str__(self):
+        """print as string for user"""
         self.print_rec()
         return ""
 
     def __repr__(self):
+        """print as represented on pc"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
