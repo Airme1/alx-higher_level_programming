@@ -6,5 +6,5 @@ Function to return JSON representation of object
 
 
 def to_json_string(my_obj):
-    """json rep of my_obj calculated and sent to x"""
+    """returns json rep of recieved object"""
     return json.dumps(my_obj)
