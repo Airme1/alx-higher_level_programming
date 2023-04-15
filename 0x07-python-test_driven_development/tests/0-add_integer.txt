@@ -5,35 +5,100 @@ importing of the python program
 =======================================
 >>> add_integer = __import__('0-add_integer').add_integer
 
-Test of 2 positive numbers
+Integers and Floats
 =======================================
 >>> add_integer(1,2)
 3
 
->>> add_integer(10,20)
-30
-
-Test of 2 negative number
-=======================================
->>> add_integer(-1,-2)
--3
-
-Test of positive and negative numbers
-=======================================
->>> add_integer(10,-2)
-8
->>> add_integer(-1,10)
+>>> add_integer(10,-1)
 9
 
-Test of characters numbers
+>>> add_integer(-10,1)
+-9
+
+>>> add_integer(10.3,-2)
+8
+
+>>> add_integer(-10,2.3)
+-8
+
+>>> add_integer(10.3, 2.3)
+12
+
+
+Test of characters and strings
 =======================================
 >>> add_integer('a',3)
 Traceback (most recent call last):
-  ...
+	...
 TypeError: a must be an integer
 
 >>> add_integer(9,'c')
 Traceback (most recent call last):
-  ...
+	...
 TypeError: b must be an integer
 
+>>> add_integer(9,'cold')
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+>>> add_integer('hot',9)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+
+Data Structures
+====================================
+
+Lists
+
+>>> add_integer([1,2,3], 4)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(1, [2,3,4])
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+
+Tuples
+
+>>> add_integer((1,2,3), 4)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(1, (2,3,4))
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+
+Sets
+
+>>> add_integer({"one", two"}, 3)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(3, {"one", "two"})
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+
+Dictionary
+
+>>> add_integer({'a': 1, 'b': 2}, 2)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(2, {'a': 1, 'b': 2})
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
