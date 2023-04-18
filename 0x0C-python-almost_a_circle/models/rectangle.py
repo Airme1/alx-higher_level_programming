@@ -56,7 +56,7 @@ class Rectangle(Base):
         elif num < 0:
             raise ValueError("x must be >= 0")
         else:
-            self.__x = x
+            self.__x = num
 
     @property
     def y(self):
@@ -76,3 +76,10 @@ class Rectangle(Base):
     def area(self):
         """Return area of Rectangle"""
         return self.__height * self.__width
+
+    def display(self):
+        """display visual representation of rectangle"""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#")
+            print()
