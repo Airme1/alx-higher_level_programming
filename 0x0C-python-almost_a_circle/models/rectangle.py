@@ -81,5 +81,10 @@ class Rectangle(Base):
         """display visual representation of rectangle"""
         for i in range(self.__height):
             for j in range(self.__width):
-                print("#")
+                print("#", end="")
             print()
+
+    def __str__(self):
+        """send user representation of string"""
+        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} -
+        {self.__width}/{self.__height}'
