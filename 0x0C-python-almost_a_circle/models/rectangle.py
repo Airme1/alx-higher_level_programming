@@ -86,5 +86,21 @@ class Rectangle(Base):
 
     def __str__(self):
         """send user representation of string"""
-        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} -
-        {self.__width}/{self.__height}'
+        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}'
+
+    def update(self, *args):
+        pos = 0
+        for arg in args:
+            if pos == 0:
+                self.id = arg
+            elif pos == 1:
+                self.width = arg
+            elif pos == 2:
+                self.height = arg
+            elif pos == 3:
+                self.x = arg
+            elif pos == 4:
+                self.y = arg
+            pos += 1
+
+        
