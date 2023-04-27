@@ -1,11 +1,12 @@
 class Square():
     """A class to find area of a square with a private instance attribute"""
 
+
     def __init__(self, size=0):
+        """instantiation of class"""
         try:
-            type(size) == type(int)
-        except TypeError:
-            print("size must be an integer")
+            type(size) != int
+        raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError:
                 print("size must be >=0")
