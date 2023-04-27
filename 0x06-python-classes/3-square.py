@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Square():
     """A class to find area of a square with a private instance attribute"""
 
