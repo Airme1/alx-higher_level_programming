@@ -2,4 +2,4 @@
 -- and order them by score
 
 SELECT * FROM second_table
-ORDER BY score;
+ORDER BY score DESC;
