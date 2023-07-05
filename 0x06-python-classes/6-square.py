@@ -4,7 +4,7 @@
 
 class Square:
     """Square claas created"""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0,0)):
         """Instantiation of class"""
         self.__size = size
 
@@ -35,3 +35,7 @@ class Square:
                 for j in range(self.__size):
                     print("#", end='')
                 print()
+
+    @property
+    def position(self):
+        return self.__position
