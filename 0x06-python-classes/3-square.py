@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Class to define square"""
+
+
 class Square():
     """A class to find area of a square with a private instance attribute"""
     def __init__(self, size=0):
