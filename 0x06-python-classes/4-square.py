@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""class to create square"""
+
+
 class Square:
     """Class to use setter and getter"""
     def __init__(self, size=0):
