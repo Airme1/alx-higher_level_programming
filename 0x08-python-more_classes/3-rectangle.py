@@ -48,20 +48,14 @@ class Rectangle:
             return 0
         else:
             return (self.__height * 2) + (self.__width * 2)
-
-    def print_rec(self):
-        """print rectangle with #"""
-        if self.__width == 0 or self.__height == 0:
-            pass
-        else:
-            for num1 in range(self.__height):
-                for num2 in range(self.__width):
-                    print("#", end='')
-                    if num1 == self.__height - 1:
-                        pass
-                    else:
-                        print()
     
     def __str__(self):
-        self.print_rec()
-        return ""
+        """print string representation of object"""
+        st = ''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                st += '#'
+            if i == self.__height -1:
+                break
+            st += '\n'
+        return st
