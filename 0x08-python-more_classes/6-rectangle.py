@@ -3,9 +3,14 @@
 
 
 class Rectangle:
+    """class attributes stays here"""
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
+        """instance attributes stay here"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -14,6 +19,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """setter method for height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -35,6 +41,7 @@ class Rectangle:
         self.__width = value
 
     def area(self):
+        """return area"""
         return self.__height * self.__width
 
     def perimeter(self):
@@ -44,7 +51,23 @@ class Rectangle:
         else:
             return (self.__width * 2) + (self.__height * 2)
 
-    def print_rec(self):
-        """print rectangle with #"""
-        if self.width == 0 or self.__height == 0:
-            return ""
+
+    def __str__(self):
+        """print string representation of object"""
+        st = ''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                st += '#'
+            if i == self.__height - 1:
+                break
+            st += '\n'
+        return st
+
+    def __repr__(self):
+        """the object's python representation"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """delete instance of rectangle"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
