@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """
 Checks if object was inherited directly or 
 indirectly from a class returns either True/False
