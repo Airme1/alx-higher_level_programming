@@ -1,7 +1,7 @@
-#File to show test for 0-add_integer.py
+#File to show Doctest for 0-add_integer.py
 
 =======================================
-importing of the python program
+importing of the python module
 =======================================
 >>> add_integer = __import__('0-add_integer').add_integer
 
@@ -25,6 +25,8 @@ Integers and Floats
 >>> add_integer(10.3, 2.3)
 12
 
+>>> add_integer(0,0)
+0
 
 Test of characters and strings
 =======================================
@@ -53,7 +55,7 @@ Data Structures
 ====================================
 
 Lists
-
+=======================
 >>> add_integer([1,2,3], 4)
 Traceback (most recent call last):
 	...
@@ -66,7 +68,7 @@ TypeError: b must be an integer
 
 
 Tuples
-
+===============================
 >>> add_integer((1,2,3), 4)
 Traceback (most recent call last):
 	...
@@ -79,8 +81,8 @@ TypeError: b must be an integer
 
 
 Sets
-
->>> add_integer({"one", two"}, 3)
+=============================
+>>> add_integer({"one", "two"}, 3)
 Traceback (most recent call last):
 	...
 TypeError: a must be an integer
@@ -88,11 +90,11 @@ TypeError: a must be an integer
 >>> add_integer(3, {"one", "two"})
 Traceback (most recent call last):
 	...
-TypeError: a must be an integer
+TypeError: b must be an integer
 
 
 Dictionary
-
+==============================
 >>> add_integer({'a': 1, 'b': 2}, 2)
 Traceback (most recent call last):
 	...

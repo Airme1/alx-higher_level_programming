@@ -1,0 +1,118 @@
+Matrix Doctest:
+Matrix is meant to be divided by second parameter given
+Matrix is to be of equal row length
+=========================================================
+Import the matrix module
+========================
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+------------------------------------------------------------
+matrix with integers 
+====================
+>>> matrix = [[1,2,3],[4,5,6]]
+>>> div = 2
+>>> matrix_divided(matrix,div)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+divide by zero
+=======================
+>>> matrix = [[1,2,3],[4,5,6]]
+>>> div = 0
+>>> matrix_divided(matrix,div)
+Traceback (most recent call last):
+	...
+ZeroDivisionError: division by zero
+
+
+Divisor is float
+----------------------------
+>>> matrix = [[1,2,3],[4,5,6]]
+>>> div = 2.5
+>>> matrix_divided(matrix,div)
+[[0.4, 0.8, 1.2], [1.6, 2.0, 2.4]]
+
+
+Matrix with floats
+=====================
+>>> matrix = [[1.2,2.2,3.2], [2.1,2.2,2.3]]
+>>> matrix_divided(matrix, div)
+[[0.48, 0.88, 1.28], [0.84, 0.88, 0.92]]
+
+
+Matrix with different length
+=============================
+>>> matrix = [[1,2,3], [4,5]]
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+	...
+TypeError: Each row of the matrix must have the  
+
+Empty list
+======================
+>>> matrix = []
+>>> div = 1
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+	...
+IndexError: list index out of range
+
+
+Empty matrix
+========================
+>>> matrix = [[],[]]
+>>> matrix_divided(matrix, div)
+OUTPUT
+
+Matrix with letters
+========================
+>>> matrix = [['a','b','c'], ['d','e','f']]
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+character
+====================
+>>> matrix = 'a'
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+strings
+======================
+>>> matrix = 'aa'
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+number
+=======================
+>>> matrix = 1
+>>> matrix_divided(matrix, div) 
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+tuples
+=================
+>>> matrix = ((1,2,3), (4,5,6))
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+dictionary
+======================
+>>> matrix = {{1,2,3}, {2,4,5}}
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
