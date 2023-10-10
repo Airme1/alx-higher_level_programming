@@ -4,7 +4,10 @@ Class BaseGeometry to raise Exceptions of
 TypeError, ValueError
 """
 
+
 class BaseGeometry:
+    """BaseGeometry class"""
+
     def area(self):
         """
         raise Exception
