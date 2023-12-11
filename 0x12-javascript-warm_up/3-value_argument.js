@@ -6,6 +6,6 @@ if (!argv[2]){
 }else{
 
 	for(let i = 2; i < argv.length; i++){
-		console.log(argv[i];
+		console.log(argv[i]);
 	}
 }
