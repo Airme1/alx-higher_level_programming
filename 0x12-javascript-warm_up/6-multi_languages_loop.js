@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-let quotes = ["C is fun", "Python is cool", "JavaScript is amazing"];
+const quote = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-for (let i = 0; i < quotes.length; i++){
-	console.log(qutoes[i]);
+for (let i = 0; i < quote.length; i++) {
+  console.log(quote[i]);
 }
