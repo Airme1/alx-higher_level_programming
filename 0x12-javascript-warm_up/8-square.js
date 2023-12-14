@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const { argv } = require('node:process');
+const { argv } = require('process');
 
 if (!parseInt(argv[2])) {
   console.log('Missing size');
